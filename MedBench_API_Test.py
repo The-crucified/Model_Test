@@ -1,18 +1,3 @@
-"""
-import requests
-
-url = "https://pension.home.komect.com/ac-health-open/health/ai/v1/chat/completions"
-payload = {
-    "model": "medbench-agent-cn",
-    "messages": [{"role": "user", "content": "请帮我分析一下高血压患者的日常饮食注意事项"}],
-    "signature": "K7pQ2mZ9xR4tL8nV",
-}
-headers = {"Content-Type": "application/json"}
-
-resp = requests.post(url, json=payload, headers=headers)
-answer = resp.json()["choices"][0]["message"]["content"]
-print(answer)
-"""
 import json
 from openai import OpenAI
 
